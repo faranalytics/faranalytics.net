@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Lato;
+    font-weight: 100;
+    src: url('./fonts/Lato-Thin.ttf') format('truetype')
+  }
+
+  @font-face {
+    font-family: Lato;
+    font-weight: 300;
+    src: url('./fonts/Lato-Light.ttf') format('truetype')
+  }
+
+  @font-face {
+    font-family: Lato;
+    font-weight: 400;
+    src: url('./fonts/Lato-Regular.ttf') format('truetype')
+  }
+
+#wrapper {
+    position: relative;
+    width: 60em;
+    margin: 0 auto;
+}
+
+fade-header-component {
+    display: block;
+    position: relative;
+    margin: 0 0 3.2em 0;
+}
+
+header {
+    display: flex;
+    width: 60em;
+    margin: 0 auto;
+}
+
+#branding {
+    height: 100px;
+    flex-grow: 0;
+}
+
+header-menu {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    cursor: default;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+nav ul {
+    display: flex;
+    position: absolute;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    line-height: 3.2;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    padding: 0 2em;
+    line-height: 3.2;
+    min-width: 5em;
+}
+/*line-height and inline-block is used for sizing because not all elements have an <a> element.*/
+
+nav > ul {
+    bottom: 0px;
+}
+
+nav > ul > li {
+    line-height: 2;
+}
+
+nav li:hover > ul {
+    display: flex;
+    visibility: visible;
+    z-index:1;
+    background-color:rgba(255, 255, 255, 0.75);
+}
+
+nav > ul ul > li:hover {
+    background-color:rgba(225, 225, 225, 0.75);
+}
+
+nav > ul ul > li:hover > a {
+    text-decoration: underline;
+}
+
+nav > ul ul {
+    /* display: none; */
+    visibility: hidden;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+nav > ul ul > li {
+    white-space: nowrap;
+    overflow: visible;
+}
+
+nav > ul > li > ul > li ul {
+    left: 100%;
+    top: -1px;
+}
+
+main {
+    position: relative;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+main p {
+    margin: 2em;
+}
